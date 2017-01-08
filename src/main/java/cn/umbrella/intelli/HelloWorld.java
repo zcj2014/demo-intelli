@@ -31,20 +31,26 @@ package cn.umbrella.intelli;
     class Thread10_Entity {
         private String username = "user";
         private String password = "user";
+        private byte[] lock = new byte[0];
 
-        synchronized void set(String username, String password) {
-            this.username = username;
-            try {
-                Thread.sleep(5000);
-            } catch (InterruptedException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            }
-            this.password = password;
+         void set(String username, String password) {
+             synchronized(this.password) {
+                 this.username = username;
+                 try {
+                     Thread.sleep(5000);
+                 } catch (InterruptedException e) {
+                     // TODO Auto-generated catch block
+                     e.printStackTrace();
+                 }
+                 this.password = password;
+             }
         }
 
-        String get() {
-            return username + "   " + password;
+         String get() {
+             synchronized(this.password) {
+                 System.out.println("你好！");
+                 return username + "   " + this.password;
+             }
         }
     }
 
