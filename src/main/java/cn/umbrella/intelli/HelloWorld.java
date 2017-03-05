@@ -9,7 +9,6 @@ package cn.umbrella.intelli;
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
             System.out.println(entity.get());
@@ -39,7 +38,6 @@ package cn.umbrella.intelli;
                  try {
                      Thread.sleep(5000);
                  } catch (InterruptedException e) {
-                     // TODO Auto-generated catch block
                      e.printStackTrace();
                  }
                  this.password = password;

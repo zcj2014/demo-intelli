@@ -4,7 +4,7 @@ import org.junit.Test;
 
 public class HelloWorldTest {
     @Test
-    public void main() throws Exception {
+    public void testHelloWorld() throws Exception {
 
     }
 
