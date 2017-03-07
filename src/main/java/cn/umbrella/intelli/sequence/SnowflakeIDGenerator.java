@@ -1,7 +1,7 @@
 package cn.umbrella.intelli.sequence;
 
 /**
- * Snowflake算法实现
+ * Snowflake ID Generator算法实现
  */
 public class SnowflakeIDGenerator extends AbstractIDGenerator{
     private final long twepoch = 1288834974657L;
