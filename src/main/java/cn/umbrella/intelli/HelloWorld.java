@@ -3,6 +3,11 @@ package cn.umbrella.intelli;
 
     public class HelloWorld {
         public static void main(String[] args) {
+            long maxWorkerId = ~(-1L << 5);
+            long squenceMask = ~(-1L << 12);
+            System.out.println("maxWorkerId:"+ maxWorkerId);
+            System.out.println("sequenceMask:"+ squenceMask);
+
             Thread10_Entity entity = new Thread10_Entity();
             Thread10_1 t10_1 = new  Thread10_1(entity);
             t10_1.start();
